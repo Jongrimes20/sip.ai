@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct sip_aiApp: App {
+    @StateObject var dataManager = DataManager()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(dataManager)
         }
     }
 }
